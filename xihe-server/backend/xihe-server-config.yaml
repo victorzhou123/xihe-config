@@ -1,0 +1,242 @@
+authing:
+  app_id: "${AUTHING_APP_ID}"
+  secret: "${AUTHING_SECRET}"
+  redirect_uri: "${AUTHING_REDIRECT_URI_TEST}"
+
+mongodb:
+  db_conn: "${MONGODB_CONNECTION}"
+  db_name: "${MONGODB_NAME}"
+  collections:
+    project: project
+    model: model
+    dataset: dataset 
+    user: user
+    login: login
+    like: like
+    activity: activity
+    tag: tag
+    luojia: luojia
+    wukong: wukong
+    training: training
+    finetune: finetune
+    evaluate: evaluate
+    inference: inference
+    aiquestion: aiquestion
+    competition: competition
+    question_pool: questionpool
+    wukong_picture: wukongpicture
+
+gitlab:
+  endpoint: "${GITLAB_ENDPOINT}"
+  graphql_endpoint: "${GITLAB_GRAPHQL_ENDPOINT}"
+  root_token: "${GITLAB_TOKEN}"
+  default_branch: main
+  lfs_path: gitlab-lfs
+  download_expiry: 3600
+  obs:
+    endpoint: "${HW_OBS_ENDPOINT}"
+    access_key: "${HW_OBS_AK}"
+    secret_key: "${HW_OBS_SK}"
+    bucket: "${HW_OBS_BUCKET}"
+
+api:
+  token_key: "${API_TOKEN_KEY}"
+  token_expiry: 3600
+  encryption_key: "${ENCRYPTION_KEY}"
+  default_password: "${DEFAULT_PASSWORD}"
+  max_training_record_num: 5
+  tags:
+    dataset:
+    - app
+
+    model:
+    - app
+    - computer
+    - file_format
+    - framework
+
+    project:
+    - app
+
+    global_model:
+    - app
+    - computer
+    - file_format
+    - framework
+    - license
+
+    global_project:
+    - app
+    - project_type
+    - training_platform
+    - license
+
+    global_dataset:
+    - app
+    - license
+
+bigmodel:
+  cloud:
+    domain: "${BIGMODEL_USER}"
+    user: "${BIGMODEL_USER}"
+    password: "${BIGMODEL_PASSWORD}"
+    project: "${BIGMODEL_PROJECT}"
+    auth_endpoint: "${BIGMODEL_AUTH_ENDPOINT}"
+
+  endpoints:
+    vqa: "${BIGMODEL_VQA}"
+    pangu: "${BIGMODEL_PANGU}"
+    luojia: "${BIGMODEL_LUOJIA}"
+    wukong: "${BIGMODEL_WUKONG}"
+    codegeex: "${BIGMODEL_CODEGEEX}"
+    desc_picture: "${BIGMODEL_DESCRIBE_PICTURE}"
+    signle_picture: "${BIGMODEL_SINGLE_PICTURE}"
+    multiple_pictures: "${BIGMODEL_MULTI_PICTURES}"
+
+  obs:
+    endpoint: "${VQA_OBS_ENDPOINT}"
+    access_key: "${VQA_OBS_ACCESS_KEY}"
+    secret_key: "${VQA_OBS_SECRET_KEY}"
+    vqa_bucket: "${VQA_OBS_BUCKET}"
+    luo_jia_bucket: "${LUOJIA_OBS_BUCKET}"
+
+  moderation:
+    endpoint: https://moderation.cn-north-4.myhuaweicloud.com
+    access_key: "${HW_OBS_AK}"
+    secret_key: "${HW_OBS_SK}"
+    region: cn-north-4
+    iam_endpoint: https://iam.cn-north-4.myhuaweicloud.com
+
+  wukong:
+    sample_id: "1"
+    sample_num: 5
+    sample_count: 22
+    domain: "${BIGMODEL_DOMAIN_WUKONG}"
+    user: "${BIGMODEL_USER_WUKONG}"
+    password: "${BIGMODEL_PASSWORD_WUKONG}"
+    project: "${BIGMODEL_PROJECT}"
+    auth_endpoint: "${BIGMODEL_AUTH_ENDPOINT_WUKONG}"
+    endpoint: "${WUKONG_OBS_ENDPOINT}"
+    access_key: "${WUKONG_OBS_ACCESS_KEY}"
+    secret_key: "${WUKONG_OBS_SECRET_KEY}"
+    bucket: "${WUKONG_OBS_BUCKET}"
+
+domain:
+  min_name_length: 3
+  max_name_length: 35
+  max_desc_length: 200
+  min_training_name_length: 1
+  max_training_name_length: 64
+  max_training_desc_length: 256
+  covers:
+  - "1"
+  - "2"
+  - "3"
+  - "4"
+
+  protocols:
+  - "apache-2.0"
+  - "mit"
+  - "cc-by-sa-3.0"
+  - "afl-3.0"
+  - "cc-by-sa-4.0"
+  - "lgpl-3.0"
+  - "lgpl-lr"
+  - "cc-by-nc-3.0"
+  - "bsd-2-clause"
+  - "ecl-2.0"
+  - "cc-by-nc-sa-4.0"
+  - "cc-by-nc-4.0"
+  - "gpl-3.0"
+  - "cc0-1.0"
+  - "cc"
+  - "bsd-3-clause"
+  - "agpl-3.0"
+  - "wtfpl"
+  - "artistic-2.0"
+  - "postgresql"
+  - "gpl-2.0"
+  - "isc"
+  - "eupl-1.1"
+  - "pddl"
+  - "bsd-3-clause-clear"
+  - "mpl-2.0"
+  - "odbl-1.0"
+  - "cc-by-4.0"
+
+  project_type:
+  - "Gradio"
+  - "Static"
+
+  training_platform:
+  - "ModelArts"
+
+  finetunes:
+    opt-caption:
+      tasks:
+      - finetune
+      hyperparameters:
+      - epochs
+      - start_learning_rate
+      - end_learning_rate
+
+mq:
+  address: "${KAFKA_ADDRESS}"
+  topics:
+    fork: "xihe_fork_test"
+    like: "xihe_like_test"
+    evaluate: "xihe_evaluate_test"
+    training: "xihe_training_test"
+    finetune: "xihe_finetune_test"
+    inference: "xihe_inference_test"
+    following: "xihe_following_test"
+    submission: "xihe_submission_test"
+    operate_log: "xihe_operate_log_test"
+    related_resource: "xihe_related_resource_test"
+
+training:
+  job_done_status:
+  - "Failed"
+  - "Timeout"
+  - "Abnormal"
+  - "Completed"
+  - "Terminated"
+
+finetune:
+  endpoint: "http://service-finetune.xihe-test-v2.svc.cluster.local:8888"
+  job_done_status:
+  - "Failed"
+  - "Abnormal"
+  - "Completed"
+  - "Terminated"
+  can_terminate_status:
+  - "Pending"
+  - "Running"
+  - "Creating"
+
+competition:
+  obs:
+    endpoint: "${HW_OBS_ENDPOINT}"
+    access_key: "${HW_OBS_AK}"
+    secret_key: "${HW_OBS_SK}"
+    bucket: "${HW_OBS_BUCKET}"
+    prefix: "competition"
+
+challenge:
+  Competition_success_score: 100
+  competitions:
+  - "food_classification"
+  - "xian_travel"
+  - "text_classification"
+  - "mask_detection"
+  ai_question:
+    ai_question_id: "637c3a63493f490b71ef8cfc"
+    question_pool_id: "63885178cc89dc63db426580"
+    timeout: 100
+    retry_times: 100
+    choice_questions_num: 7
+    choice_questions_count : 103
+    choice_questions_score : 5
+    completion_questions_num: 3
+    completion_questions_count : 50
+    completion_questions_score : 15

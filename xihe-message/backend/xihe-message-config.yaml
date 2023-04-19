@@ -1,0 +1,106 @@
+training_endpoint: http://service-training-center-huaweicloud.xihe-test-v2.svc.cluster.local:8888/api/v1/training
+finetune_endpoint: http://service-finetune.xihe-test-v2.svc.cluster.local:8888/api/v1/finetune
+
+mongodb:
+  db_conn: "mongodb://xiheAdmin:Password11@127.0.0.1:27017/xihe-server?timeoutMS=5000"
+  db_name: "xihe-server"
+  collections:
+    project: project
+    model: model
+    dataset: dataset 
+    user: user
+    login: login
+    like: like
+    activity: activity
+    tag: tag
+    luojia: luojia
+    wukong: wukong
+    training: training
+    finetune: finetune
+    evaluate: evaluate
+    inference: inference
+    aiquestion: aiquestion
+    competition: competition
+    question_pool: questionpool
+    wukong_picture: wukongpicture
+
+domain:
+  min_name_length: 3
+  max_name_length: 35
+  max_desc_length: 200
+  min_training_name_length: 1
+  max_training_name_length: 64
+  max_training_desc_length: 256
+  covers:
+  - "1"
+  - "2"
+  - "3"
+  - "4"
+
+  protocols:
+  - "apache-2.0"
+  - "mit"
+  - "cc-by-sa-3.0"
+  - "afl-3.0"
+  - "cc-by-sa-4.0"
+  - "lgpl-3.0"
+  - "lgpl-lr"
+  - "cc-by-nc-3.0"
+  - "bsd-2-clause"
+  - "ecl-2.0"
+  - "cc-by-nc-sa-4.0"
+  - "cc-by-nc-4.0"
+  - "gpl-3.0"
+  - "cc0-1.0"
+  - "cc"
+  - "bsd-3-clause"
+  - "agpl-3.0"
+  - "wtfpl"
+  - "artistic-2.0"
+  - "postgresql"
+  - "gpl-2.0"
+  - "isc"
+  - "eupl-1.1"
+  - "pddl"
+  - "bsd-3-clause-clear"
+  - "mpl-2.0"
+  - "odbl-1.0"
+  - "cc-by-4.0"
+
+  project_type:
+  - "Gradio"
+  - "Static"
+
+  training_platform:
+  - "ModelArts"
+
+  finetunes:
+    opt-caption:
+      tasks:
+      - finetune
+      hyperparameters:
+      - epochs
+      - start_learning_rate
+      - end_learning_rate
+
+mq:
+  address: "47.106.222.191:10004"
+  topics:
+    fork: "xihe_fork_test"
+    like: "xihe_like_test"
+    download: "xihe_download_test"
+    evaluate: "xihe_evaluate_test"
+    training: "xihe_training_test"
+    finetune: "xihe_finetune_test"
+    inference: "xihe_inference_test"
+    following: "xihe_following_test"
+    submission: "xihe_submission_test"
+    operate_log: "xihe_operate_log_test"
+    related_resource: "xihe_related_resource_test"
+
+evaluate:
+  endpoint: http://service-inference-evaluate.xihe-test-v2.svc.cluster.local:8888
+  survival_time: 10800
+
+inference:
+  endpoint: http://service-inference-evaluate.xihe-test-v2.svc.cluster.local:8888

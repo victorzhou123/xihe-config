@@ -1,0 +1,74 @@
+postgresql:
+  db:
+    host: "114.132.69.235"
+    user: "xihe"
+    pwd: "Password11"
+    name: "xihe"
+    port: 5432
+    life: 
+  table:
+    pod: pod
+    wukong_task: wukong_task
+
+bigmodel:
+  cloud:
+    domain: "wuhanjisuan191"
+    user: "wuhanjisuan191"
+    password: "WHxq570#ReY"
+    project: "cn-central-221"
+    auth_endpoint: "https://iam-pub.cn-central-221.ovaijisuan.com/v3/auth/tokens"
+  
+  endpoints:
+    vqa: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/b6c5cf73-de6a-49ed-ac40-5e943903e010/v3/infer/vqa"
+    pangu: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/302dc54c-144f-425d-b0e7-767d07f8d180/infer/text"
+    luojia: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/0924eee2-371a-421b-a13c-ff2b52763d84/infer/image"
+    wukong: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/8566ca41-8867-4e15-9fc9-8588fe06f71d/txt2img_wukong,https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/c92be52d-8059-4a7b-9a0d-5e4330fb987e/txt2img_wukong,https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/5cfeb78f-8e48-4311-abb6-e294a8acf265/txt2img_wukong"
+    codegeex: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/6d47ab7c-445e-476a-9dff-a6ed8a3fa3e1/text2image"
+    desc_picture: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/43e0580c-ebc1-4aa3-9897-2b7b9debc3e2/infer/image"
+    signle_picture: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/18833070-c3db-4915-a795-fdeef6a43ac5/text2image"
+    multiple_pictures: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/a55e424e-b4fd-403b-97f9-d406be420f84/text2image"
+
+  obs:
+    endpoint: "https://obs.cn-central-221.ovaijisuan.com"
+    access_key: "YDUYXZXPVPATIPIQWCYS"
+    secret_key: "SZRhAeaJw8jE51TwaX7GziIUXIYIYZmpBDr6wxNo"
+    vqa_bucket: "vqa"
+    luo_jia_bucket: "luojianet"
+
+  moderation:
+    endpoint: https://moderation.cn-north-4.myhuaweicloud.com
+    access_key: "RIBWOTGZ2VMC1RDZKYCG"
+    secret_key: "DCumGDHUZSRqsEwEjqpTtKPeNE4Xm11UvDW61k8o"
+    region: cn-north-4
+    iam_endpoint: https://iam.cn-north-4.myhuaweicloud.com
+
+  wukong:
+    sample_id: "1"
+    sample_num: 5
+    sample_count: 22
+    domain: "hwstaff_h00223369"
+    user: "xihe"
+    password: "GefFq^F#6MBWpfre"
+    project: "cn-central-221"
+    auth_endpoint: "https://iam.cn-central-221.myhuaweicloud.com/v3/auth/tokens"
+    endpoint: "https://obs.cn-central-221.ovaijisuan.com"
+    access_key: "YDUYXZXPVPATIPIQWCYS"
+    secret_key: "SZRhAeaJw8jE51TwaX7GziIUXIYIYZmpBDr6wxNo"
+    bucket: "big-model-deploy"
+
+mq:
+  address: "127.0.0.1:9092"
+  topics:
+    fork: "xihe_fork_test"
+    like: "xihe_like_test"
+    download: "xihe_download_test"
+    evaluate: "xihe_evaluate_test"
+    training: "xihe_training_test"
+    finetune: "xihe_finetune_test"
+    inference: "xihe_inference_test"
+    following: "xihe_following_test"
+    submission: "xihe_submission_test"
+    operate_log: "xihe_operate_log_test"
+    related_resource: "xihe_related_resource_test"
+    cloud: "xihe_cloud_test"
+    async: "xihe_async_test"
