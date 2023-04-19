@@ -4,9 +4,9 @@
       endpoint: "https://xiheapi.osinfra.cn/oneid/oidc"
 
     mongodb:
-        db_conn: "${MONGODB_CONNECTION}"
-        db_name: "${MONGODB_NAME}"
-        collections:
+      db_conn: "${MONGODB_CONNECTION}"
+      db_name: "${MONGODB_NAME}"
+      collections:
         project: project
         model: model
         dataset: dataset 
@@ -36,13 +36,13 @@
         cloud_record: cloud_record
 
     gitlab:
-        endpoint: "${GITLAB_ENDPOINT}"
-        graphql_endpoint: "${GITLAB_GRAPHQL_ENDPOINT}"
-        root_token: "${GITLAB_TOKEN}"
-        default_branch: main
-        lfs_path: gitlab-lfs
-        download_expiry: 3600
-        obs:
+      endpoint: "${GITLAB_ENDPOINT}"
+      graphql_endpoint: "${GITLAB_GRAPHQL_ENDPOINT}"
+      root_token: "${GITLAB_TOKEN}"
+      default_branch: main
+      lfs_path: gitlab-lfs
+      download_expiry: 3600
+      obs:
         endpoint: "${HW_OBS_ENDPOINT}"
         access_key: "${HW_OBS_AK}"
         secret_key: "${HW_OBS_SK}"
@@ -50,7 +50,7 @@
 
     api:
       token_key: "${API_TOKEN_KEY}"
-      token_expiry: 3600000000000
+      token_expiry: 3600
       encryption_key: "${ENCRYPTION_KEY}"
       default_password: "${DEFAULT_PASSWORD}"
       max_training_record_num: 5
@@ -190,7 +190,7 @@
           - end_learning_rate
 
     mq:
-      address: "127.0.0.1:9092"
+      address: "${KAFKA_ADDRESS}"
       topics:
         fork: "xihe_fork_test"
         like: "xihe_like_test"
