@@ -1,95 +1,95 @@
-mongodb:
-  db_conn: "${MONGODB_CONNECTION}"
-  db_name: "${MONGODB_NAME}"
-  collections:
-    project: project
-    model: model
-    dataset: dataset
-    user: user
-    registration: registration
-    login: login
-    like: like
-    activity: activity
-    tag: tag
-    luojia: luojia
-    wukong: wukong
-    training: training
-    finetune: finetune
-    evaluate: evaluate
-    inference: inference
-    aiquestion: aiquestion
-    competition: competition
-    question_pool: questionpool
-    wukong_picture: wukongpicture
-    competition_work: competition_work
-    competition_player: competition_player
-    course: course
-    course_player: course_player
-    course_work: course_work
-    cloud_conf: cloud_conf
+    mongodb:
+      db_conn: "${MONGODB_CONNECTION}"
+      db_name: "${MONGODB_NAME}"
+      collections:
+        project: project
+        model: model
+        dataset: dataset
+        user: user
+        registration: registration
+        login: login
+        like: like
+        activity: activity
+        tag: tag
+        luojia: luojia
+        wukong: wukong
+        training: training
+        finetune: finetune
+        evaluate: evaluate
+        inference: inference
+        aiquestion: aiquestion
+        competition: competition
+        question_pool: questionpool
+        wukong_picture: wukongpicture
+        competition_work: competition_work
+        competition_player: competition_player
+        course: course
+        course_player: course_player
+        course_work: course_work
+        cloud_conf: cloud_conf
 
-domain:
-  min_name_length: 3
-  max_name_length: 35
-  max_desc_length: 200
-  min_training_name_length: 1
-  max_training_name_length: 64
-  max_training_desc_length: 256
-  covers:
-  - "1"
-  - "2"
-  - "3"
-  - "4"
-  protocols:
-  - "apache-2.0"
-  - "mit"
-  - "cc-by-sa-3.0"
-  - "afl-3.0"
-  - "cc-by-sa-4.0"
-  - "lgpl-3.0"
-  - "lgpl-lr"
-  - "cc-by-nc-3.0"
-  - "bsd-2-clause"
-  - "ecl-2.0"
-  - "cc-by-nc-sa-4.0"
-  - "cc-by-nc-4.0"
-  - "gpl-3.0"
-  - "cc0-1.0"
-  - "cc"
-  - "bsd-3-clause"
-  - "agpl-3.0"
-  - "wtfpl"
-  - "artistic-2.0"
-  - "postgresql"
-  - "gpl-2.0"
-  - "isc"
-  - "eupl-1.1"
-  - "pddl"
-  - "bsd-3-clause-clear"
-  - "mpl-2.0"
-  - "odbl-1.0"
-  - "cc-by-4.0"
-  project_type:
-  - "Gradio"
-  - "Static"
-  training_platform:
-  - "ModelArts"
-  finetunes:
-    opt-caption:
-      tasks:
-      - finetune
-      hyperparameters:
-      - epochs
-      - start_learning_rate
-      - end_learning_rate
+    domain:
+      min_name_length: 3
+      max_name_length: 35
+      max_desc_length: 200
+      min_training_name_length: 1
+      max_training_name_length: 64
+      max_training_desc_length: 256
+      covers:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      protocols:
+      - "apache-2.0"
+      - "mit"
+      - "cc-by-sa-3.0"
+      - "afl-3.0"
+      - "cc-by-sa-4.0"
+      - "lgpl-3.0"
+      - "lgpl-lr"
+      - "cc-by-nc-3.0"
+      - "bsd-2-clause"
+      - "ecl-2.0"
+      - "cc-by-nc-sa-4.0"
+      - "cc-by-nc-4.0"
+      - "gpl-3.0"
+      - "cc0-1.0"
+      - "cc"
+      - "bsd-3-clause"
+      - "agpl-3.0"
+      - "wtfpl"
+      - "artistic-2.0"
+      - "postgresql"
+      - "gpl-2.0"
+      - "isc"
+      - "eupl-1.1"
+      - "pddl"
+      - "bsd-3-clause-clear"
+      - "mpl-2.0"
+      - "odbl-1.0"
+      - "cc-by-4.0"
+      project_type:
+      - "Gradio"
+      - "Static"
+      training_platform:
+      - "ModelArts"
+      finetunes:
+        opt-caption:
+          tasks:
+          - finetune
+          hyperparameters:
+          - epochs
+          - start_learning_rate
+          - end_learning_rate
 
-postgresql:
-  db:
-    host: "${PGSQL_HOST}"
-    user: "${PGSQL_USER}"
-    pwd: "${PGSQL_PWD}"
-    name: "${PGSQL_NAME}"
-    port: ${PGSQL_PORT}
-    life: 
-  table:
-    pod: pod
+    postgresql:
+      db:
+        host: "${PGSQL_HOST}"
+        user: "${PGSQL_USER}"
+        pwd: "${PGSQL_PWD}"
+        name: "${PGSQL_NAME}"
+        port: ${PGSQL_PORT}
+        life: 
+      table:
+        pod: pod

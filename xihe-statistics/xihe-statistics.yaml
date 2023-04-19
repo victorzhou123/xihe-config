@@ -1,23 +1,23 @@
-name: "xihe-statistics"
-http_port: 8080
-duration: 180
+    name: "xihe-statistics"
+    http_port: 8080
+    duration: 180
 
-pgsql:
-  host: "${PGSQL_HOST}"
-  port: ${PGSQL_PORT}
-  user: "${PGSQL_USER}"
-  db_name: "${PGSQL_NAME}"
-  password: "${PGSQL_PWD}"
+    pgsql:
+      host: "${PGSQL_HOST}"
+      port: ${PGSQL_PORT}
+      user: "${PGSQL_USER}"
+      db_name: "${PGSQL_NAME}"
+      password: "${PGSQL_PWD}"
 
-mq:
-  address: "${KAFKA_ADDRESS}"
-  max_retry: 5
-  topics:
-    statistics: "xihe_statistics"
-    gitlab: "xihe-gitlab-test-v2"
+    mq:
+      address: "${KAFKA_ADDRESS}"
+      max_retry: 5
+      topics:
+        statistics: "xihe_statistics"
+        gitlab: "xihe-gitlab-test-v2"
 
-gitlab:
-  endpoint: "${GITLAB_ENDPOINT}"
-  root_token: "${GITLAB_TOKEN}"
-  count_per_page: 50
-  refresh_time: 100
+    gitlab:
+      endpoint: "${GITLAB_ENDPOINT}"
+      root_token: "${GITLAB_TOKEN}"
+      count_per_page: 50
+      refresh_time: 100

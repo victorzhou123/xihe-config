@@ -1,79 +1,79 @@
-postgresql:
-  db:
-    host: "${PGSQL_HOST}"
-    user: "${PGSQL_USER}"
-    pwd: "${PGSQL_PWD}"
-    name: "${PGSQL_NAME}"
-    port: ${PGSQL_PORT}
-    life: 
-  table:
-    pod: pod
-    wukong_task: wukong_task
+    postgresql:
+      db:
+        host: "${PGSQL_HOST}"
+        user: "${PGSQL_USER}"
+        pwd: "${PGSQL_PWD}"
+        name: "${PGSQL_NAME}"
+        port: ${PGSQL_PORT}
+        life: 
+      table:
+        pod: pod
+        wukong_task: wukong_task
 
-bigmodel:
-  cloud:
-    domain: "${BIGMODEL_USER}"
-    user: "${BIGMODEL_USER}"
-    password: "${BIGMODEL_PASSWORD}"
-    project: "${BIGMODEL_PROJECT}"
-    auth_endpoint: "${BIGMODEL_AUTH_ENDPOINT}"
+    bigmodel:
+      cloud:
+        domain: "${BIGMODEL_USER}"
+        user: "${BIGMODEL_USER}"
+        password: "${BIGMODEL_PASSWORD}"
+        project: "${BIGMODEL_PROJECT}"
+        auth_endpoint: "${BIGMODEL_AUTH_ENDPOINT}"
 
-  endpoints:
-    vqa: "${BIGMODEL_VQA}"
-    pangu: "${BIGMODEL_PANGU}"
-    luojia: "${BIGMODEL_LUOJIA}"
-    wukong: "${BIGMODEL_WUKONG}"
-    codegeex: "${BIGMODEL_CODEGEEX}"
-    desc_picture: "${BIGMODEL_DESCRIBE_PICTURE}"
-    signle_picture: "${BIGMODEL_SINGLE_PICTURE}"
-    multiple_pictures: "${BIGMODEL_MULTI_PICTURES}"
+      endpoints:
+        vqa: "${BIGMODEL_VQA}"
+        pangu: "${BIGMODEL_PANGU}"
+        luojia: "${BIGMODEL_LUOJIA}"
+        wukong: "${BIGMODEL_WUKONG}"
+        codegeex: "${BIGMODEL_CODEGEEX}"
+        desc_picture: "${BIGMODEL_DESCRIBE_PICTURE}"
+        signle_picture: "${BIGMODEL_SINGLE_PICTURE}"
+        multiple_pictures: "${BIGMODEL_MULTI_PICTURES}"
 
-  obs:
-    endpoint: "${VQA_OBS_ENDPOINT}"
-    access_key: "${VQA_OBS_ACCESS_KEY}"
-    secret_key: "${VQA_OBS_SECRET_KEY}"
-    vqa_bucket: "${VQA_OBS_BUCKET}"
-    luo_jia_bucket: "${LUOJIA_OBS_BUCKET}"
+      obs:
+        endpoint: "${VQA_OBS_ENDPOINT}"
+        access_key: "${VQA_OBS_ACCESS_KEY}"
+        secret_key: "${VQA_OBS_SECRET_KEY}"
+        vqa_bucket: "${VQA_OBS_BUCKET}"
+        luo_jia_bucket: "${LUOJIA_OBS_BUCKET}"
 
-  moderation:
-    endpoint: https://moderation.cn-north-4.myhuaweicloud.com
-    access_key: "${HW_OBS_AK}"
-    secret_key: "${HW_OBS_SK}"
-    region: cn-north-4
-    iam_endpoint: https://iam.cn-north-4.myhuaweicloud.com
+      moderation:
+        endpoint: https://moderation.cn-north-4.myhuaweicloud.com
+        access_key: "${HW_OBS_AK}"
+        secret_key: "${HW_OBS_SK}"
+        region: cn-north-4
+        iam_endpoint: https://iam.cn-north-4.myhuaweicloud.com
 
-  wukong:
-    sample_id: "1"
-    sample_num: 5
-    sample_count: 22
-    domain: "${BIGMODEL_DOMAIN_WUKONG}"
-    user: "${BIGMODEL_USER_WUKONG}"
-    password: "${BIGMODEL_PASSWORD_WUKONG}"
-    project: "${BIGMODEL_PROJECT}"
-    auth_endpoint: "${BIGMODEL_AUTH_ENDPOINT_WUKONG}"
-    endpoint: "${WUKONG_OBS_ENDPOINT}"
-    access_key: "${WUKONG_OBS_ACCESS_KEY}"
-    secret_key: "${WUKONG_OBS_SECRET_KEY}"
-    bucket: "${WUKONG_OBS_BUCKET}"
+      wukong:
+        sample_id: "1"
+        sample_num: 5
+        sample_count: 22
+        domain: "${BIGMODEL_DOMAIN_WUKONG}"
+        user: "${BIGMODEL_USER_WUKONG}"
+        password: "${BIGMODEL_PASSWORD_WUKONG}"
+        project: "${BIGMODEL_PROJECT}"
+        auth_endpoint: "${BIGMODEL_AUTH_ENDPOINT_WUKONG}"
+        endpoint: "${WUKONG_OBS_ENDPOINT}"
+        access_key: "${WUKONG_OBS_ACCESS_KEY}"
+        secret_key: "${WUKONG_OBS_SECRET_KEY}"
+        bucket: "${WUKONG_OBS_BUCKET}"
 
-mq:
-  address: "${KAFKA_ADDRESS}"
-  topics:
-    fork: "xihe_fork_test"
-    like: "xihe_like_test"
-    download: "xihe_download_test"
-    evaluate: "xihe_evaluate_test"
-    training: "xihe_training_test"
-    finetune: "xihe_finetune_test"
-    inference: "xihe_inference_test"
-    following: "xihe_following_test"
-    submission: "xihe_submission_test"
-    operate_log: "xihe_operate_log_test"
-    related_resource: "xihe_related_resource_test"
-    cloud: "xihe_cloud_test"
-    async: "xihe_async_test"
+    mq:
+      address: "${KAFKA_ADDRESS}"
+      topics:
+        fork: "xihe_fork_test"
+        like: "xihe_like_test"
+        download: "xihe_download_test"
+        evaluate: "xihe_evaluate_test"
+        training: "xihe_training_test"
+        finetune: "xihe_finetune_test"
+        inference: "xihe_inference_test"
+        following: "xihe_following_test"
+        submission: "xihe_submission_test"
+        operate_log: "xihe_operate_log_test"
+        related_resource: "xihe_related_resource_test"
+        cloud: "xihe_cloud_test"
+        async: "xihe_async_test"
 
-watcher:
-  time:
-    scan_time: 300
-    trigger_time: 30
+    watcher:
+      time:
+        scan_time: 300
+        trigger_time: 30
