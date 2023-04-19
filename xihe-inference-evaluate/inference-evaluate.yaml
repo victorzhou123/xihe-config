@@ -20,8 +20,8 @@ evaluate:
     crd_cpu: 0.5
     crd_memory: 512
     crd_template: /Users/victor/code/GolangProjects/src/project/xihe-inference-evaluate/template/crd-evaluate.yaml
-cloud:  # new
-  rpc_endpiont: 127.0.0.1:8086 # internal-service address
+cloud:
+  rpc_endpiont: 127.0.0.1:8086
   jupyter_token: "${JUPYTER_TOKEN}"
   crd:
     crd_image: "${CLOUD_CRD_IMAGE}"
