@@ -104,7 +104,7 @@
           - end_learning_rate
 
     mq:
-      address: "127.0.0.1:9092"
+      address: "${KAFKA_ADDRESS}"
       topics:
         fork: "xihe_fork_test"
         like: "xihe_like_test"
@@ -128,5 +128,5 @@
       endpoint: http://service-inference-evaluate.xihe-test-v2.svc.cluster.local:8888
 
     cloud:
-      endpoint: "http://127.0.0.1:8085"
-      survival_time: 10800
+      endpoint: "{CLOUD_ENDPOINT}"
+      survival_time: 7200
