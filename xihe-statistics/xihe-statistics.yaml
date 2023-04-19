@@ -3,14 +3,14 @@ http_port: 8080
 duration: 180
 
 pgsql:
-  host: "114.132.69.235"
-  port: "5432"
-  user: "xihe"
-  db_name: "xihe"
-  password: "Password11"
+  host: "${PGSQL_HOST}"
+  port: ${PGSQL_PORT}
+  user: "${PGSQL_USER}"
+  db_name: "${PGSQL_NAME}"
+  password: "${PGSQL_PWD}"
 
 mq:
-  address: "127.0.0.1:9092"
+  address: "${KAFKA_ADDRESS}"
   max_retry: 5
   topics:
     statistics: "xihe_statistics"

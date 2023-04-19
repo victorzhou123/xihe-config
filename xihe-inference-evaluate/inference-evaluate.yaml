@@ -2,10 +2,10 @@ inference:
   rpc_endpiont: 127.0.0.1:8086
   gitlab_endpiont: "http://gitlab-service.source.svc.cluster.local/api/v4"
   obs:
-    access_key: "RIBWOTGZ2VMC1RDZKYCG"
-    secret_key: "DCumGDHUZSRqsEwEjqpTtKPeNE4Xm11UvDW61k8o"
-    endpoint: "obs.cn-north-4.myhuaweicloud.com"
-    bucket: "chenzeng-test1"
+    access_key: "${HW_OBS_AK}"
+    secret_key: "${HW_OBS_SK}"
+    endpoint: "${HW_OBS_ENDPOINT}"
+    bucket: "${HW_OBS_BUCKET}"
     obsutil_path: /usr/src/app/obsutil
     lfs_path: gitlab-lfs
   crd:
@@ -22,11 +22,11 @@ evaluate:
     crd_template: /Users/victor/code/GolangProjects/src/project/xihe-inference-evaluate/template/crd-evaluate.yaml
 cloud:  # new
   rpc_endpiont: 127.0.0.1:8086 # internal-service address
-  jupyter_token: f9a3bd4e9f2c3be01cd629154cfb224c2703181e050254b5
+  jupyter_token: "${JUPYTER_TOKEN}"
   crd:
-    crd_image:  swr.cn-north-4.myhuaweicloud.com/xihe-image/mindspore-jupyter:cpu
-    crd_cpu: 0.5
-    crd_memory: 512
+    crd_image: "${CLOUD_CRD_IMAGE}"
+    crd_cpu: ${CLOUD_CRD_CPU}
+    crd_memory: ${CLOUD_CRD_MEMORY}
     crd_template: /Users/victor/code/GolangProjects/src/project/xihe-inference-evaluate/template/crd-cloud.yaml
 k8s:
   kind: CodeServer

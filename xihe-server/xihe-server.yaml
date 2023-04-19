@@ -1,15 +1,15 @@
 authing:
-  app_id: "63d63f7886d8627a4992c6ce"
-  secret: "b76f4076e7134c885834de4a83a7e1e9"
+  app_id: "${AUTHING_APP_ID}"
+  secret: "${AUTHING_SECRET}"
   endpoint: "https://xiheapi.osinfra.cn/oneid/oidc"
 
 mongodb:
-  db_conn: "mongodb://xiheAdmin:Password11@127.0.0.1:6000/xihe-server?timeoutMS=5000"
-  db_name: "xihe-server"
-  collections:
+    db_conn: "${MONGODB_CONNECTION}"
+    db_name: "${MONGODB_NAME}"
+    collections:
     project: project
     model: model
-    dataset: dataset
+    dataset: dataset 
     user: user
     registration: registration
     login: login
@@ -35,36 +35,24 @@ mongodb:
     cloud_conf: cloud_conf
     cloud_record: cloud_record
 
-postgresql:
-  db:
-    host: "114.132.69.235"
-    user: "xihe"
-    pwd: "Password11"
-    name: "xihe"
-    port: 5432
-    life: 
-  table:
-    pod: pod
-    wukong_task: wukong_task # new
-
 gitlab:
-  endpoint: http://127.0.0.1:8090/api/v4
-  graphql_endpoint: http://127.0.0.1:8090/api/graphql
-  root_token: glpat-a1GVpnJK3CyL__899gG1
-  default_branch: main
-  lfs_path: gitlab-lfs
-  download_expiry: 3600
-  obs:
-    endpoint: "obs.cn-north-4.myhuaweicloud.com"
-    access_key: "RIBWOTGZ2VMC1RDZKYCG"
-    secret_key: "DCumGDHUZSRqsEwEjqpTtKPeNE4Xm11UvDW61k8o"
-    bucket: "chenzeng-test1"
+    endpoint: "${GITLAB_ENDPOINT}"
+    graphql_endpoint: "${GITLAB_GRAPHQL_ENDPOINT}"
+    root_token: "${GITLAB_TOKEN}"
+    default_branch: main
+    lfs_path: gitlab-lfs
+    download_expiry: 3600
+    obs:
+    endpoint: "${HW_OBS_ENDPOINT}"
+    access_key: "${HW_OBS_AK}"
+    secret_key: "${HW_OBS_SK}"
+    bucket: "${HW_OBS_BUCKET}"
 
 api:
-  token_key: "xxxxx"
+  token_key: "${API_TOKEN_KEY}"
   token_expiry: 3600000000000
-  encryption_key: "xxxxxxxxxxxxxxxx"
-  default_password: "Password@1"
+  encryption_key: "${ENCRYPTION_KEY}"
+  default_password: "${DEFAULT_PASSWORD}"
   max_training_record_num: 5
   tags:
     dataset:
@@ -98,33 +86,33 @@ api:
 
 bigmodel:
   cloud:
-    domain: "wuhanjisuan191"
-    user: "wuhanjisuan191"
-    password: "WHxq570#ReY"
-    project: "cn-central-221"
-    auth_endpoint: "https://iam-pub.cn-central-221.ovaijisuan.com/v3/auth/tokens"
+    domain: "${BIGMODEL_USER}"
+    user: "${BIGMODEL_USER}"
+    password: "${BIGMODEL_PASSWORD}"
+    project: "${BIGMODEL_PROJECT}"
+    auth_endpoint: "${BIGMODEL_AUTH_ENDPOINT}"
 
   endpoints:
-    vqa: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/b6c5cf73-de6a-49ed-ac40-5e943903e010/v3/infer/vqa"
-    pangu: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/302dc54c-144f-425d-b0e7-767d07f8d180/infer/text"
-    luojia: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/0924eee2-371a-421b-a13c-ff2b52763d84/infer/image"
-    wukong: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/8566ca41-8867-4e15-9fc9-8588fe06f71d/txt2img_wukong,https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/c92be52d-8059-4a7b-9a0d-5e4330fb987e/txt2img_wukong,https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/5cfeb78f-8e48-4311-abb6-e294a8acf265/txt2img_wukong"
-    codegeex: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/6d47ab7c-445e-476a-9dff-a6ed8a3fa3e1/text2image"
-    desc_picture: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/43e0580c-ebc1-4aa3-9897-2b7b9debc3e2/infer/image"
-    signle_picture: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/18833070-c3db-4915-a795-fdeef6a43ac5/text2image"
-    multiple_pictures: "https://a2f051d4cabf45f885d7b0108edc9b9c.infer.ovaijisuan.com/v1/infers/a55e424e-b4fd-403b-97f9-d406be420f84/text2image"
+    vqa: "${BIGMODEL_VQA}"
+    pangu: "${BIGMODEL_PANGU}"
+    luojia: "${BIGMODEL_LUOJIA}"
+    wukong: "${BIGMODEL_WUKONG}"
+    codegeex: "${BIGMODEL_CODEGEEX}"
+    desc_picture: "${BIGMODEL_DESCRIBE_PICTURE}"
+    signle_picture: "${BIGMODEL_SINGLE_PICTURE}"
+    multiple_pictures: "${BIGMODEL_MULTI_PICTURES}"
 
   obs:
-    endpoint: "https://obs.cn-central-221.ovaijisuan.com"
-    access_key: "YDUYXZXPVPATIPIQWCYS"
-    secret_key: "SZRhAeaJw8jE51TwaX7GziIUXIYIYZmpBDr6wxNo"
-    vqa_bucket: "vqa"
-    luo_jia_bucket: "luojianet"
+    endpoint: "${VQA_OBS_ENDPOINT}"
+    access_key: "${VQA_OBS_ACCESS_KEY}"
+    secret_key: "${VQA_OBS_SECRET_KEY}"
+    vqa_bucket: "${VQA_OBS_BUCKET}"
+    luo_jia_bucket: "${LUOJIA_OBS_BUCKET}"
 
   moderation:
     endpoint: https://moderation.cn-north-4.myhuaweicloud.com
-    access_key: "RIBWOTGZ2VMC1RDZKYCG"
-    secret_key: "DCumGDHUZSRqsEwEjqpTtKPeNE4Xm11UvDW61k8o"
+    access_key: "${HW_OBS_AK}"
+    secret_key: "${HW_OBS_SK}"
     region: cn-north-4
     iam_endpoint: https://iam.cn-north-4.myhuaweicloud.com
 
@@ -132,15 +120,15 @@ bigmodel:
     sample_id: "1"
     sample_num: 5
     sample_count: 22
-    domain: "hwstaff_h00223369"
-    user: "xihe"
-    password: "GefFq^F#6MBWpfre"
-    project: "cn-central-221"
-    auth_endpoint: "https://iam.cn-central-221.myhuaweicloud.com/v3/auth/tokens"
-    endpoint: "https://obs.cn-central-221.ovaijisuan.com"
-    access_key: "YDUYXZXPVPATIPIQWCYS"
-    secret_key: "SZRhAeaJw8jE51TwaX7GziIUXIYIYZmpBDr6wxNo"
-    bucket: "big-model-deploy"
+    domain: "${BIGMODEL_DOMAIN_WUKONG}"
+    user: "${BIGMODEL_USER_WUKONG}"
+    password: "${BIGMODEL_PASSWORD_WUKONG}"
+    project: "${BIGMODEL_PROJECT}"
+    auth_endpoint: "${BIGMODEL_AUTH_ENDPOINT_WUKONG}"
+    endpoint: "${WUKONG_OBS_ENDPOINT}"
+    access_key: "${WUKONG_OBS_ACCESS_KEY}"
+    secret_key: "${WUKONG_OBS_SECRET_KEY}"
+    bucket: "${WUKONG_OBS_BUCKET}"
 
 domain:
   min_name_length: 3
@@ -240,10 +228,10 @@ finetune:
 
 competition:
   obs:
-    endpoint: "obs.cn-north-4.myhuaweicloud.com"
-    access_key: "RIBWOTGZ2VMC1RDZKYCG"
-    secret_key: "DCumGDHUZSRqsEwEjqpTtKPeNE4Xm11UvDW61k8o"
-    bucket: "chenzeng-test1"
+    endpoint: "${HW_OBS_ENDPOINT}"
+    access_key: "${HW_OBS_AK}"
+    secret_key: "${HW_OBS_SK}"
+    bucket: "${HW_OBS_BUCKET}"
     prefix: "competition"
 
 challenge:
@@ -264,3 +252,15 @@ challenge:
     completion_questions_num: 3
     completion_questions_count : 50
     completion_questions_score : 15
+
+postgresql:
+  db:
+    host: "${PGSQL_HOST}"
+    user: "${PGSQL_USER}"
+    pwd: "${PGSQL_PWD}"
+    name: "${PGSQL_NAME}"
+    port: ${PGSQL_PORT}
+    life: 
+  table:
+    pod: pod
+    wukong_task: wukong_task

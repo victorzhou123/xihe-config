@@ -2,8 +2,8 @@ training_endpoint: http://service-training-center-huaweicloud.xihe-test-v2.svc.c
 finetune_endpoint: http://service-finetune.xihe-test-v2.svc.cluster.local:8888/api/v1/finetune
 
 mongodb:
-  db_conn: "mongodb://xiheAdmin:Password11@127.0.0.1:6000/xihe-server?timeoutMS=5000"
-  db_name: "xihe-server"
+  db_conn: "${MONGODB_CONNECTION}"
+  db_name: "${MONGODB_NAME}"
   collections:
     project: project
     model: model
@@ -34,14 +34,15 @@ mongodb:
 
 postgresql:
   db:
-    host: "114.132.69.235"
-    user: "xihe"
-    pwd: "Password11"
-    name: "xihe"
-    port: 5432
+    host: "${PGSQL_HOST}"
+    user: "${PGSQL_USER}"
+    pwd: "${PGSQL_PWD}"
+    name: "${PGSQL_NAME}"
+    port: ${PGSQL_PORT}
+    life: 
   table:
     pod: pod
-    wukong_task: wukong_task # new
+    wukong_task: wukong_task
 
 domain:
   min_name_length: 3
@@ -117,7 +118,7 @@ mq:
     operate_log: "xihe_operate_log_test"
     related_resource: "xihe_related_resource_test"
     cloud: "xihe_cloud_test"
-    async: "xihe_async_test" # new
+    async: "xihe_async_test"
 
 evaluate:
   endpoint: http://service-inference-evaluate.xihe-test-v2.svc.cluster.local:8888
