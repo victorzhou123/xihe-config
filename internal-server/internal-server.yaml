@@ -4,7 +4,7 @@
       collections:
         project: project
         model: model
-        dataset: dataset
+        dataset: dataset 
         user: user
         registration: registration
         login: login
@@ -26,7 +26,9 @@
         course: course
         course_player: course_player
         course_work: course_work
+        course_record: course_record
         cloud_conf: cloud_conf
+        cloud_record: cloud_record
 
     domain:
       min_name_length: 3
@@ -93,3 +95,4 @@
         life: 
       table:
         pod: pod
+        wukong_task: wukong_task
