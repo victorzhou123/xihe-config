@@ -33,7 +33,6 @@
         course_work: course_work
         course_record: course_record
         cloud_conf: cloud_conf
-        cloud_record: cloud_record
 
     gitlab:
       endpoint: "${GITLAB_ENDPOINT}"
@@ -50,7 +49,7 @@
 
     api:
       token_key: "${API_TOKEN_KEY}"
-      token_expiry: 3600
+      token_expiry: 432000
       encryption_key: "${ENCRYPTION_KEY}"
       default_password: "${DEFAULT_PASSWORD}"
       max_training_record_num: 5
@@ -215,7 +214,7 @@
       - "Terminated"
 
     finetune:
-      endpoint: "http://service-finetune.xihe-test-v2.svc.cluster.local:8888"
+      endpoint: "${FINETUNE_ENDPOINT}"
       job_done_status:
       - "Failed"
       - "Abnormal"
@@ -242,8 +241,8 @@
       - "text_classification"
       - "mask_detection"
       ai_question:
-        ai_question_id: "637c3a63493f490b71ef8cfc"
-        question_pool_id: "63885178cc89dc63db426580"
+        ai_question_id: "${AI_QUESTION_ID}"
+        question_pool_id: "${QUESTION_POOL_ID}"
         timeout: 100
         retry_times: 100
         choice_questions_num: 7

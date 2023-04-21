@@ -1,6 +1,6 @@
     inference: 
-      rpc_endpiont: 127.0.0.1:8086
-      gitlab_endpiont: "http://gitlab-service.source.svc.cluster.local/api/v4"
+      rpc_endpiont: "${INTERNAL_RPC_ENDPOINT}"
+      gitlab_endpiont: "${GITLAB_HOST}"
       obs:
         access_key: "${HW_OBS_AK}"
         secret_key: "${HW_OBS_SK}"
@@ -12,25 +12,28 @@
         crd_image: swr.cn-north-4.myhuaweicloud.com/opensourceway/mindspore/xihe-inference-evaluate:inferenceimpl.v1.0.20221126115653
         crd_cpu: 0.5
         crd_memory: 512
-        crd_template: /Users/victor/code/GolangProjects/src/project/xihe-inference-evaluate/template/crd-inference.yaml
+        crd_template: "${INFERENCE_CRD_TEMPLATE}"
+
     evaluate:
-      rpc_endpiont: 127.0.0.1:8086
+      rpc_endpiont: "${INTERNAL_RPC_ENDPOINT}"
       crd:
         crd_image: swr.cn-north-4.myhuaweicloud.com/opensourceway/mindspore/xihe-inference-evaluate:evaluateimpl.v1.0.20221124180204
         crd_cpu: 0.5
         crd_memory: 512
-        crd_template: /Users/victor/code/GolangProjects/src/project/xihe-inference-evaluate/template/crd-evaluate.yaml
+        crd_template: "${EVALUATE_CRD_TEMPLATE}"
+
     cloud:
-      rpc_endpiont: 127.0.0.1:8086
+      rpc_endpiont: "${INTERNAL_RPC_ENDPOINT}"
       jupyter_token: "${JUPYTER_TOKEN}"
       crd:
         crd_image: "${CLOUD_CRD_IMAGE}"
         crd_cpu: ${CLOUD_CRD_CPU}
         crd_memory: ${CLOUD_CRD_MEMORY}
-        crd_template: /Users/victor/code/GolangProjects/src/project/xihe-inference-evaluate/template/crd-cloud.yaml
+        crd_template: "${CLOUD_CRD_TEMPLATE}"
+
     k8s:
       kind: CodeServer
       group: cs.opensourceways.com
       version: v1alpha1
       namespace: mindspore-xihe
-      kube_config_file: /Users/victor/code/config/xihe-container/xihe-cloud/cloud-kubeconfig.json
+      kube_config_file: "${KUBE_CONFIG_FILE}"

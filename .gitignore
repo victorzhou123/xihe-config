@@ -5,6 +5,7 @@
 *.so
 *.dylib
 *.swp
+*.DS_Store
 xihe-server
 message-server/message-server
 internal-server/internal-server

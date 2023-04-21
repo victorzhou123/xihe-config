@@ -2,7 +2,7 @@
 
 # root dir
 local_config_root_path="/Users/victor/code/config/xihe-config"
-infra_root_path="/Users/victor/code/config/infra-mindspore/applications/xihe-test-v2"
+infra_root_path="/Users/victor/code/config/infra-mindspore/applications/xihe-new"
 
 
 # define header
@@ -19,24 +19,24 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: server-configmap
-  namespace: xihe-test-v2
+  namespace: xihe-new
 data:
   config.yaml: |
 "
 
 # sync function
 sync () {
-    if [ $1 == "xihe-server" ]
-    then
-        header=${header2}
-    else
-        header=${header1}
-    fi
+  if [ $1 == "xihe-server" ]
+  then
+      header=${header2}
+  else
+      header=${header1}
+  fi
 
-    content=$(cat ${local_config_root_path}/$1/$1.yaml)
-    content="${header}${content}"
+	content=$(cat ${local_config_root_path}/$1/$1.yaml)
+	content="${header}${content}"
 
-    echo "$content" > "${infra_root_path}/$1/configmap.yaml"
+	echo "$content" > "${infra_root_path}/$1/configmap.yaml"
 }
 
 # run sync

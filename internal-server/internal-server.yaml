@@ -28,7 +28,6 @@
         course_work: course_work
         course_record: course_record
         cloud_conf: cloud_conf
-        cloud_record: cloud_record
 
     domain:
       min_name_length: 3

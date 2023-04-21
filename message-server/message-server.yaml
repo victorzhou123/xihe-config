@@ -1,5 +1,5 @@
-    training_endpoint: http://service-training-center-huaweicloud.xihe-test-v2.svc.cluster.local:8888/api/v1/training
-    finetune_endpoint: http://service-finetune.xihe-test-v2.svc.cluster.local:8888/api/v1/finetune
+    training_endpoint: "${TRAINING_ENDPOINT}"
+    finetune_endpoint: "${FINETUNE_ENDPOINT}"
 
     mongodb:
       db_conn: "${MONGODB_CONNECTION}"
@@ -31,7 +31,6 @@
         course_work: course_work
         course_record: course_record
         cloud_conf: cloud_conf
-        cloud_record: cloud_record
 
     postgresql:
       db:
@@ -122,12 +121,14 @@
         async: "xihe_async_test"
 
     evaluate:
-      endpoint: http://service-inference-evaluate.xihe-test-v2.svc.cluster.local:8888
+      endpoint: "${INFERENCE_EVALUATE_ENDPOINT}"
       survival_time: 10800
 
     inference:
-      endpoint: http://service-inference-evaluate.xihe-test-v2.svc.cluster.local:8888
+      endpoint: "${INFERENCE_EVALUATE_ENDPOINT}"
+      project_tags_for_official:
+      - "official"
 
     cloud:
-      endpoint: "{CLOUD_ENDPOINT}"
+      endpoint: "${INFERENCE_EVALUATE_ENDPOINT}"
       survival_time: 7200
