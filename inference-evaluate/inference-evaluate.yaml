@@ -35,5 +35,5 @@
       kind: CodeServer
       group: cs.opensourceways.com
       version: v1alpha1
-      namespace: mindspore-xihe
+      namespace: "{KUBE_NAMESPACE}"
       kube_config_file: "${KUBE_CONFIG_FILE}"

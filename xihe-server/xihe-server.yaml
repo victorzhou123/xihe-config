@@ -93,10 +93,14 @@
 
       endpoints:
         vqa: "${BIGMODEL_VQA}"
+        vqa_hf: "${BIGMODEL_VQAHF}"
         pangu: "${BIGMODEL_PANGU}"
         luojia: "${BIGMODEL_LUOJIA}"
-        wukong: "${BIGMODEL_WUKONG}"
+        luojia_hf: "${BIGMODEL_LUOJIAHF}"
+        wukong: "${BIGMODEL_WUKONG_2IMG}"
+        wukong_4img: "${BIGMODEL_WUKONG_4IMG}"
         wukong_hf: "${BIGMODEL_WUKONGHF}"
+        desc_picture_hf: "${BIGMODEL_DESCRIBE_PICTUREHF}"
         codegeex: "${BIGMODEL_CODEGEEX}"
         desc_picture: "${BIGMODEL_DESCRIBE_PICTURE}"
         signle_picture: "${BIGMODEL_SINGLE_PICTURE}"
