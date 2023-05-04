@@ -42,7 +42,7 @@
         life: 
       table:
         pod: pod
-        wukong_task: wukong_task
+        async_task: async_task
 
     domain:
       min_name_length: 3
@@ -119,6 +119,7 @@
         related_resource: "xihe_related_resource_test"
         cloud: "xihe_cloud_test"
         async: "xihe_async_test"
+        bigmodel: "xihe_bigmodel_test"
 
     evaluate:
       endpoint: "${INFERENCE_EVALUATE_ENDPOINT}"

@@ -209,6 +209,7 @@
         related_resource: "xihe_related_resource_test"
         cloud: "xihe_cloud_test"
         async: "xihe_async_test"
+        bigmodel: "xihe_bigmodel_test"
 
     training:
       job_done_status:
@@ -267,4 +268,4 @@
         life: 
       table:
         pod: pod
-        wukong_task: wukong_task
+        async_task: async_task

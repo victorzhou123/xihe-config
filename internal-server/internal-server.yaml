@@ -94,4 +94,4 @@
         life: 
       table:
         pod: pod
-        wukong_task: wukong_task
+        async_task: async_task
