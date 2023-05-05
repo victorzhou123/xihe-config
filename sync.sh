@@ -24,11 +24,22 @@ data:
   config.yaml: |
 "
 
+header3="---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: async-server-configmap
+  namespace: xihe-test-v2
+data:
+  config.yaml: |
+"
+
 # sync function
 sync () {
-    if [ $1 == "xihe-server" ]
-    then
+    if [ $1 == "xihe-server" ]; then
         header=${header2}
+    elif [ $1 == "async-server" ]; then
+        header=${header3}
     else
         header=${header1}
     fi
@@ -44,3 +55,4 @@ sync "message-server"
 sync "internal-server"
 sync "xihe-server"
 sync "inference-evaluate"
+sync "async-server"
