@@ -56,15 +56,18 @@
       tags:
         dataset:
         - app
+        - industry
 
         model:
         - app
         - computer
         - file_format
         - framework
+        - industry
 
         project:
         - app
+        - industry
 
         global_model:
         - app
@@ -72,16 +75,19 @@
         - file_format
         - framework
         - license
+        - industry
 
         global_project:
         - app
         - project_type
         - training_platform
         - license
+        - industry
 
         global_dataset:
         - app
         - license
+        - industry
 
     bigmodel:
       cloud:
