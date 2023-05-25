@@ -9,7 +9,7 @@
         obsutil_path: /usr/src/app/obsutil
         lfs_path: gitlab-lfs
       crd:
-        crd_image: swr.cn-north-4.myhuaweicloud.com/opensourceway/mindspore/xihe-inference-evaluate:inferenceimpl.v1.0.20221126115653
+        crd_image: "${INFERENCE_CRD_IMAGE}"
         crd_cpu: 0.5
         crd_memory: 512
         crd_template: "${INFERENCE_CRD_TEMPLATE}"
@@ -17,7 +17,7 @@
     evaluate:
       rpc_endpiont: "${INTERNAL_RPC_ENDPOINT}"
       crd:
-        crd_image: swr.cn-north-4.myhuaweicloud.com/opensourceway/mindspore/xihe-inference-evaluate:evaluateimpl.v1.0.20221124180204
+        crd_image: "${EVALUATE_CRD_IMAGE}"
         crd_cpu: 0.5
         crd_memory: 512
         crd_template: "${EVALUATE_CRD_TEMPLATE}"
