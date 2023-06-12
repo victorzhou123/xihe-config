@@ -15,6 +15,7 @@
       topics:
         statistics: "xihe_statistics"
         gitlab: "xihe-gitlab-test-v2"
+        training: "xihe_training"
 
     gitlab:
       endpoint: "${GITLAB_ENDPOINT}"
