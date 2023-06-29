@@ -49,7 +49,7 @@
 
     api:
       token_key: "${API_TOKEN_KEY}"
-      token_expiry: 432000
+      token_expiry: 28800
       encryption_key: "${ENCRYPTION_KEY}"
       encryption_key_csrf: "${ENCRYPTION_KEY_CSRF}"
       default_password: "${DEFAULT_PASSWORD}"
