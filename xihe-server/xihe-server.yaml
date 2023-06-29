@@ -279,3 +279,9 @@
       table:
         pod: pod
         async_task: async_task
+    
+    redis:
+      db:
+        address: "${REDIS_ADDRESS}"
+        password: "${REDIS_PASSWORD}"
+        key_pair: "${KEY_PAIR}"
