@@ -12,7 +12,7 @@
 
     bigmodel:
       cloud:
-        domain: "${BIGMODEL_USER}"
+        domain: "${BIGMODEL_DOMAIN}"
         user: "${BIGMODEL_USER}"
         password: "${BIGMODEL_PASSWORD}"
         project: "${BIGMODEL_PROJECT}"
