@@ -13,9 +13,22 @@
       address: "${KAFKA_ADDRESS}"
       max_retry: 5
       topics:
-        statistics: "xihe_statistics"
+        statistics: "xihe_statistics_test"
         gitlab: "xihe-gitlab-test-v2"
-        training: "xihe_training"
+        fork: "xihe_fork_test"
+        like: "xihe_like_test"
+        download: "xihe_download_test"
+        evaluate: "xihe_evaluate_test"
+        training: "xihe_training_test"
+        finetune: "xihe_finetune_test"
+        inference: "xihe_inference_test"
+        following: "xihe_following_test"
+        submission: "xihe_submission_test"
+        operate_log: "xihe_operate_log_test"
+        related_resource: "xihe_related_resource_test"
+        cloud: "xihe_cloud_test"
+        async: "xihe_async_test"
+        bigmodel: "xihe_bigmodel_test"
 
     gitlab:
       endpoint: "${GITLAB_ENDPOINT}"
