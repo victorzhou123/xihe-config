@@ -1,5 +1,5 @@
     name: "xihe-statistics"
-    http_port: 8080
+    http_port: 9090
     duration: 180
 
     pgsql:
