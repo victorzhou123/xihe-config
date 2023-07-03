@@ -1,0 +1,40 @@
+    domain:
+      min_training_name_length: 1
+      max_training_name_length: 64
+      max_training_desc_length: 256
+
+    train:
+      obs:
+        access_key: "${HW_OBS_AK}"
+        secret_key: "${HW_OBS_SK}"
+        endpoint: "${HW_OBS_ENDPOINT}"
+        bucket: "${HW_OBS_BUCKET}"
+
+      modelarts:
+        access_key: "${HW_OBS_AK}"
+        secret_key: "${HW_OBS_SK}"
+        region: "${HW_MODELARTS_REGION}"
+        project_name: "${HW_MODELARTS_PROJECT_NAME}"
+        project_id: "${HW_MODELARTS_PROJECT_ID}"
+        endpoint: "${HW_MODELARTS_ENDPOINT}"
+
+      sync:
+        repo_path: xihe-repos
+        commit_file: synced_commit
+        obsutil_path: /opt/app/obsutil
+        sync_work_dir: "/opt/app/sync_repo"
+        sync_file_shell: /opt/app/sync_file.sh
+        upload_work_dir: "/opt/app/upload_folder"
+        upload_folder_shell: /opt/app/upload_folder.sh
+
+    watch:
+      endpoint: service-internal-server.xihe-test-v2.svc.cluster.local:8888
+
+    mysql:
+      conn: "${MYSQL_CONN}"
+      conn_max_life_time: 1
+      project_table_name: "project"
+
+    gitlab:
+      token: "${GITLAB_TOKEN}"
+      host: "${GITLAB_HOST}"
