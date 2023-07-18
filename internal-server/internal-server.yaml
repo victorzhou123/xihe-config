@@ -1,6 +1,7 @@
     mongodb:
       db_conn: "${MONGODB_CONNECTION}"
       db_name: "${MONGODB_NAME}"
+      db_cert: "${MONGODB_CERT}"
       collections:
         project: project
         model: model
