@@ -32,6 +32,7 @@
         desc_picture: "${BIGMODEL_DESCRIBE_PICTURE}"
         signle_picture: "${BIGMODEL_SINGLE_PICTURE}"
         multiple_pictures: "${BIGMODEL_MULTI_PICTURES}"
+        ai_detector: "${BIGMODEL_AI_DETECTOR}"
 
       obs:
         endpoint: "${VQA_OBS_ENDPOINT}"
