@@ -9,6 +9,12 @@
       db_name: "${PGSQL_NAME}"
       password: "${PGSQL_PWD}"
 
+    redis:
+      db:
+        address: "${REDIS_ADDRESS}"
+        password: "${REDIS_PASSWORD}"
+        key_pair: "${KEY_PAIR}"
+
     mq:
       address: "${KAFKA_ADDRESS}"
       max_retry: 5
