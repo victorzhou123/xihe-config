@@ -34,6 +34,8 @@
         course_work: course_work
         course_record: course_record
         cloud_conf: cloud_conf
+        api_apply: api_apply
+        api_info: api_info
 
     gitlab:
       endpoint: "${GITLAB_ENDPOINT}"
@@ -115,6 +117,7 @@
         signle_picture: "${BIGMODEL_SINGLE_PICTURE}"
         multiple_pictures: "${BIGMODEL_MULTI_PICTURES}"
         ai_detector: "${BIGMODEL_AI_DETECTOR}"
+        wukong_user: "${BIGMODEL_WUKONG_USER}"
 
       obs:
         endpoint: "${VQA_OBS_ENDPOINT}"
