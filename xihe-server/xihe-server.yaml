@@ -118,6 +118,7 @@
         multiple_pictures: "${BIGMODEL_MULTI_PICTURES}"
         ai_detector: "${BIGMODEL_AI_DETECTOR}"
         wukong_user: "${BIGMODEL_WUKONG_USER}"
+        baichuan: "${BIGMODEL_BAICHUAN}"
 
       obs:
         endpoint: "${VQA_OBS_ENDPOINT}"

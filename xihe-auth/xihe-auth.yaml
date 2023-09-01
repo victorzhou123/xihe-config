@@ -1,0 +1,8 @@
+    access:
+      token_expiry: 28800
+      token_key: "tgbyhnujmik123@#$%{}"
+      csrf_token_key: "okjmQFXT4321aaaa"
+    redis:
+        address: "${REDIS_ADDRESS}"
+        password: "${REDIS_PASSWORD}"
+        key_pair: "${KEY_PAIR}"
