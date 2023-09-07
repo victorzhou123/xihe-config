@@ -33,6 +33,8 @@
         signle_picture: "${BIGMODEL_SINGLE_PICTURE}"
         multiple_pictures: "${BIGMODEL_MULTI_PICTURES}"
         ai_detector: "${BIGMODEL_AI_DETECTOR}"
+        wukong_user: "${BIGMODEL_WUKONG_USER}"
+        baichuan: "${BIGMODEL_BAICHUAN}"
 
       obs:
         endpoint: "${VQA_OBS_ENDPOINT}"
@@ -64,6 +66,7 @@
 
     mq:
       address: "${KAFKA_ADDRESS}"
+      version: "2.3.0"
       topics:
         fork: "xihe_fork_test"
         like: "xihe_like_test"
@@ -79,6 +82,12 @@
         cloud: "xihe_cloud_test"
         async: "xihe_async_test"
         bigmodel: "xihe_bigmodel_test"
+    
+    redis:
+      db:
+        address: "${REDIS_ADDRESS}"
+        password: "${REDIS_PASSWORD}"
+        key_pair: "${KEY_PAIR}"
 
     watcher:
       time:

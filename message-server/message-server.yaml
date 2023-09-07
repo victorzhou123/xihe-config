@@ -32,6 +32,8 @@
         course_work: course_work
         course_record: course_record
         cloud_conf: cloud_conf
+        api_apply: api_apply
+        api_info: api_info
 
     postgresql:
       db:
@@ -44,6 +46,11 @@
       table:
         pod: pod
         async_task: async_task
+    
+    redis:
+      address: "${REDIS_ADDRESS}"
+      password: "${REDIS_PASSWORD}"
+      key_pair: "${KEY_PAIR}"
 
     domain:
       min_name_length: 3
@@ -131,6 +138,7 @@
 
     mq:
       address: "${KAFKA_ADDRESS}"
+      version: "2.3.0"
       topics:
         fork: "xihe_fork_test"
         like: "xihe_like_test"

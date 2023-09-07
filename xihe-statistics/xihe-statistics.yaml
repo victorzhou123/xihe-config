@@ -17,6 +17,7 @@
 
     mq:
       address: "${KAFKA_ADDRESS}"
+      version: "2.3.0"
       max_retry: 5
       topics:
         statistics: "xihe_statistics_test"
