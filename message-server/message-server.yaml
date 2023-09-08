@@ -58,8 +58,8 @@
       max_desc_length: 200
       max_title_length: 105
       min_title_length: 3
-      min_training_name_length: 1
-      max_training_name_length: 64
+      min_training_name_length: 5
+      max_training_name_length: 50
       max_training_desc_length: 256
       covers:
       - "1"
