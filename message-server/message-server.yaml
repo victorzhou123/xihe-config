@@ -158,14 +158,14 @@
       signin:
         name: "sign_in"
         topic: "xihe_sign_in_test"
-      competitor_applied: "xihe_competitor_applied_test"
-      jupyter_created: "xihe_jupyter_created_test"
       bigmodel_topics:
         inference_start: "xihe_inference_start_test"
         inference_error: "xihe_inference_error_test"
         inference_async_start: "xihe_inference_async_start_test"
         inference_async_finish: "xihe_inference_async_finish_test"
         picture_publicized: "xihe_picture_publicized_test"
+      competitor_applied: "xihe_competitor_applied_test"
+      jupyter_created: "xihe_jupyter_created_test"
       course_applied: "xihe_course_applied_test"
 
     evaluate:
