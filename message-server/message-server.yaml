@@ -34,6 +34,8 @@
         cloud_conf: cloud_conf
         api_apply: api_apply
         api_info: api_info
+        points_task: points_task
+        user_points: user_points
 
     postgresql:
       db:
@@ -154,6 +156,9 @@
         cloud: "xihe_cloud_test"
         async: "xihe_async_test"
         bigmodel: "xihe_bigmodel_test"
+        signin:
+          name: "sign_in"
+          topic: "xihe_sign_in_test"
 
     evaluate:
       endpoint: "${INFERENCE_EVALUATE_ENDPOINT}"

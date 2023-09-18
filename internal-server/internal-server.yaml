@@ -31,6 +31,8 @@
         cloud_conf: cloud_conf
         api_apply: api_apply
         api_info: api_info
+        points_task: points_task
+        user_points: user_points
 
     domain:
       min_name_length: 3

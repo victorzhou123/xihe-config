@@ -10,7 +10,7 @@
       collections:
         project: project
         model: model
-        dataset: dataset 
+        dataset: dataset
         user: user
         registration: registration
         login: login
@@ -36,6 +36,8 @@
         cloud_conf: cloud_conf
         api_apply: api_apply
         api_info: api_info
+        points_task: points_task
+        user_points: user_points
 
     gitlab:
       endpoint: "${GITLAB_ENDPOINT}"
@@ -208,7 +210,7 @@
           - epochs
           - start_learning_rate
           - end_learning_rate
-      
+
       avatar_url:
       - "https://obs-xihe-beijing4.obs.cn-north-4.myhuaweicloud.com/xihe-img/default_avatar/common-3.png"
       - "https://obs-xihe-beijing4.obs.cn-north-4.myhuaweicloud.com/xihe-img/default_avatar/common-2.png"
@@ -233,21 +235,25 @@
 
     mq:
       address: "${KAFKA_ADDRESS}"
-      topics:
-        fork: "xihe_fork_test"
-        like: "xihe_like_test"
-        download: "xihe_download_test"
-        evaluate: "xihe_evaluate_test"
-        training: "xihe_training_test"
-        finetune: "xihe_finetune_test"
-        inference: "xihe_inference_test"
-        following: "xihe_following_test"
-        submission: "xihe_submission_test"
-        operate_log: "xihe_operate_log_test"
-        related_resource: "xihe_related_resource_test"
-        cloud: "xihe_cloud_test"
-        async: "xihe_async_test"
-        bigmodel: "xihe_bigmodel_test"
+
+    mq_topics:
+      fork: "xihe_fork_test"
+      like: "xihe_like_test"
+      download: "xihe_download_test"
+      evaluate: "xihe_evaluate_test"
+      training: "xihe_training_test"
+      finetune: "xihe_finetune_test"
+      inference: "xihe_inference_test"
+      following: "xihe_following_test"
+      submission: "xihe_submission_test"
+      operate_log: "xihe_operate_log_test"
+      related_resource: "xihe_related_resource_test"
+      cloud: "xihe_cloud_test"
+      async: "xihe_async_test"
+      bigmodel: "xihe_bigmodel_test"
+      signin:
+        name: "sign_in"
+        topic: "xihe_sign_in_test"
 
     training:
       job_done_status:
@@ -276,6 +282,13 @@
         secret_key: "${HW_OBS_SK}"
         bucket: "${HW_OBS_BUCKET}"
         prefix: "competition"
+      message:
+        work_submitted:
+          name: "work_submitted"
+          topic: "xihe_work_submitted_test"
+        competitor_applied:
+          name: "competitor_applied"
+          topic: "xihe_competitor_applied_test"
 
     challenge:
       Competition_success_score: 100
@@ -303,7 +316,7 @@
         pwd: "${PGSQL_PWD}"
         name: "${PGSQL_NAME}"
         port: ${PGSQL_PORT}
-        life: 
+        life:
       table:
         pod: pod
         async_task: async_task
@@ -313,3 +326,14 @@
         address: "${REDIS_ADDRESS}"
         password: "${REDIS_PASSWORD}"
         key_pair: "${KEY_PAIR}"
+
+    cloud:
+      jupyter_created:
+        name: "jupyter_created"
+        topic: "xihe_cloud_test"
+
+    points:
+      domain:
+        max_points_of_day: 50
+      repo:
+        keep: 30
