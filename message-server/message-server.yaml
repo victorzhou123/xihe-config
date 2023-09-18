@@ -8,7 +8,7 @@
       collections:
         project: project
         model: model
-        dataset: dataset 
+        dataset: dataset
         user: user
         registration: registration
         login: login
@@ -44,11 +44,11 @@
         pwd: "${PGSQL_PWD}"
         name: "${PGSQL_NAME}"
         port: ${PGSQL_PORT}
-        life: 
+        life:
       table:
         pod: pod
         async_task: async_task
-    
+
     redis:
       address: "${REDIS_ADDRESS}"
       password: "${REDIS_PASSWORD}"
@@ -114,7 +114,7 @@
           - epochs
           - start_learning_rate
           - end_learning_rate
-      
+
       avatar_url:
       - "https://obs-xihe-beijing4.obs.cn-north-4.myhuaweicloud.com/xihe-img/default_avatar/common-3.png"
       - "https://obs-xihe-beijing4.obs.cn-north-4.myhuaweicloud.com/xihe-img/default_avatar/common-2.png"
@@ -163,7 +163,8 @@
         inference_error: "xihe_inference_error_test"
         inference_async_start: "xihe_inference_async_start_test"
         inference_async_finish: "xihe_inference_async_finish_test"
-        picture_publicized: "xihe_picture_publicized_test"
+      picture_publicized: "xihe_picture_publicized_test"
+      picture_liked: "xihe_picture_liked_test"
       competitor_applied: "xihe_competitor_applied_test"
       jupyter_created: "xihe_jupyter_created_test"
       course_applied: "xihe_course_applied_test"
