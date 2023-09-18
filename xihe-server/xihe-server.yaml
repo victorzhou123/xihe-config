@@ -166,6 +166,9 @@
         picture_publicized:
           name: "picture_publicized"
           topic: "xihe_picture_publicized_test"
+        picture_liked:
+          name: "picture_liked"
+          topic: "xihe_picture_liked_test"
         bigmodel_access_log:
           name: "bigmodel_access_log"
           topic: "xihe_bigmodel_access_log_test"
@@ -281,6 +284,10 @@
       - "Abnormal"
       - "Completed"
       - "Terminated"
+      message:
+        training_created:
+          name: "training_created"
+          topic: "xihe_training_created_test"
 
     finetune:
       endpoint: "${FINETUNE_ENDPOINT}"
@@ -345,7 +352,7 @@
       table:
         pod: pod
         async_task: async_task
-    
+
     redis:
       db:
         address: "${REDIS_ADDRESS}"
