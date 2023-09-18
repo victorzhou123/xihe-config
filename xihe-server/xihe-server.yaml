@@ -309,6 +309,12 @@
           name: "competitor_applied"
           topic: "xihe_competitor_applied_test"
 
+    course:
+      message:
+        course_applied:
+          name: "course_applied"
+          topic: "xihe_course_applied_test"
+
     challenge:
       Competition_success_score: 100
       competitions:
