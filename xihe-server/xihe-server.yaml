@@ -150,6 +150,26 @@
         secret_key: "${WUKONG_OBS_SECRET_KEY}"
         bucket: "${WUKONG_OBS_BUCKET}"
 
+      message:
+        inference_start:
+          name: "inference_start"
+          topic: "xihe_inference_start_test"
+        inference_error:
+          name: "inference_error"
+          topic: "xihe_inference_error_test"
+        inference_async_start:
+          name: "inference_async_start"
+          topic: "xihe_inference_async_start_test"
+        inference_async_finish:
+          name: "inference_async_finish"
+          topic: "xihe_inference_async_finish_test"
+        picture_publicized:
+          name: "picture_publicized"
+          topic: "xihe_picture_publicized_test"
+        bigmodel_access_log:
+          name: "bigmodel_access_log"
+          topic: "xihe_bigmodel_access_log_test"
+
     domain:
       min_name_length: 3
       max_name_length: 35
@@ -250,7 +270,6 @@
       related_resource: "xihe_related_resource_test"
       cloud: "xihe_cloud_test"
       async: "xihe_async_test"
-      bigmodel: "xihe_bigmodel_test"
       signin:
         name: "sign_in"
         topic: "xihe_sign_in_test"

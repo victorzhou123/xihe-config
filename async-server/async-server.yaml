@@ -64,27 +64,29 @@
         secret_key: "${WUKONG_OBS_SECRET_KEY}"
         bucket: "${WUKONG_OBS_BUCKET}"
 
+      message:
+        inference_start:
+          name: "inference_start"
+          topic: "xihe_inference_start_test"
+        inference_error:
+          name: "inference_error"
+          topic: "xihe_inference_error_test"
+        inference_async_start:
+          name: "inference_async_start"
+          topic: "xihe_inference_async_start_test"
+        inference_async_finish:
+          name: "inference_async_finish"
+          topic: "xihe_inference_async_finish_test"
+        picture_publicized:
+          name: "picture_publicized"
+          topic: "xihe_picture_publicized_test"
+        bigmodel_access_log:
+          name: "bigmodel_access_log"
+          topic: "xihe_bigmodel_access_log_test"
+
     mq:
       address: "${KAFKA_ADDRESS}"
       version: "2.3.0"
-      topics:
-        fork: "xihe_fork_test"
-        like: "xihe_like_test"
-        download: "xihe_download_test"
-        evaluate: "xihe_evaluate_test"
-        training: "xihe_training_test"
-        finetune: "xihe_finetune_test"
-        inference: "xihe_inference_test"
-        following: "xihe_following_test"
-        submission: "xihe_submission_test"
-        operate_log: "xihe_operate_log_test"
-        related_resource: "xihe_related_resource_test"
-        cloud: "xihe_cloud_test"
-        async: "xihe_async_test"
-        bigmodel: "xihe_bigmodel_test"
-        signin:
-          name: "sign_in"
-          topic: "xihe_sign_in_test"
     
     redis:
       db:
