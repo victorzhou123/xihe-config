@@ -1,0 +1,38 @@
+watch:
+  endpoint: service-internal-server.xihe-new.svc.cluster.local:8000
+  max_watch_num: 10
+
+finetune:
+  wukong:
+    flavor_id: "${FLAVOR_ID}"
+    pool_id: "${POOL_ID}"
+    pool_name: "${POOL_NAME}"
+    output_key: "output_path" 
+    output_dir: "/foundation-finetune/wukong/output/" 
+    code_dir: "/foundation-finetune/wukong/code/"
+    log_dir: "/foundation-finetune/wukong/log/"
+    input_dir: "/foundation-finetune/wukong/input/"
+    ckpt_file: "/foundation-finetune/wukong/ckpt/wukong-huahua-ms.ckpt"
+    working_dir: "/home/ma-user/modelarts/user-job-dir/code/"
+    image_url: "mindspore_xihe/mindspore_1_9_0:wukong-competition"
+
+aicc:
+  domain: "${DOMAIN}"
+  user: "${USER}" 
+  password: "${PASSWORD}" 
+  project: "${PROJECT}"
+  auth_endpoint: "${AUTH_ENDPOINT}"
+  project_id: "${PROJECT_ID}"
+  endpoint: "${ENDPOINT}"
+
+obs:
+  access_key: "${ACSESS_KEY}"
+  secret_key: "${SECRET_KEY}"
+  endpoint: "${ENDPOINT}" 
+  bucket: "${BUCKET}" 
+
+upload:
+  upload_work_dir: "/opt/app/upload_folder"
+  upload_folder_shell: "/opt/app/upload_folder.sh"
+  obsutil_path: /opt/app/obsutil
+  download_expiry: 6000
