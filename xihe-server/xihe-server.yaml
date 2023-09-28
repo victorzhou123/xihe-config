@@ -121,6 +121,8 @@
         ai_detector: "${BIGMODEL_AI_DETECTOR}"
         wukong_user: "${BIGMODEL_WUKONG_USER}"
         baichuan: "${BIGMODEL_BAICHUAN}"
+        glm: "${BIGMODEL_GLM}"
+        llama: "${BIGMODEL_LLAMA}"
 
       obs:
         endpoint: "${VQA_OBS_ENDPOINT}"
@@ -161,17 +163,20 @@
           name: "inference_async_start"
           topic: "xihe_inference_async_start_test"
         inference_async_finish:
-          name: "inference_async_finish"
+          name: "try_modelzoo"
           topic: "xihe_inference_async_finish_test"
         picture_publicized:
-          name: "picture_publicized"
+          name: "publicize_wukong_picture"
           topic: "xihe_picture_publicized_test"
         picture_liked:
-          name: "picture_liked"
+          name: "like_ai_picture"
           topic: "xihe_picture_liked_test"
-        bigmodel_access_log:
-          name: "bigmodel_access_log"
-          topic: "xihe_bigmodel_access_log_test"
+        bigmodel_started:
+          name: "start_modelzoo"
+          topic: "xihe_bigmodel_started_test"
+        bigmodel_finished:
+          name: "try_modelzoo"
+          topic: "xihe_bigmodel_finished_test"
 
     domain:
       min_name_length: 3
@@ -273,9 +278,6 @@
       related_resource: "xihe_related_resource_test"
       cloud: "xihe_cloud_test"
       async: "xihe_async_test"
-      signin:
-        name: "sign_in"
-        topic: "xihe_sign_in_test"
 
     training:
       job_done_status:
@@ -286,7 +288,7 @@
       - "Terminated"
       message:
         training_created:
-          name: "training_created"
+          name: "train"
           topic: "xihe_training_created_test"
 
     finetune:
@@ -313,13 +315,13 @@
           name: "work_submitted"
           topic: "xihe_work_submitted_test"
         competitor_applied:
-          name: "competitor_applied"
+          name: "apply_competition"
           topic: "xihe_competitor_applied_test"
 
     course:
       message:
         course_applied:
-          name: "course_applied"
+          name: "apply_course"
           topic: "xihe_course_applied_test"
 
     challenge:
@@ -349,9 +351,12 @@
         name: "${PGSQL_NAME}"
         port: ${PGSQL_PORT}
         life:
-      table:
-        pod: pod
-        async_task: async_task
+      cloud:
+        table:
+          pod: "pod"
+      async:
+        table:
+          async_task: async_task
 
     redis:
       db:
@@ -361,11 +366,76 @@
 
     cloud:
       jupyter_created:
-        name: "jupyter_created"
-        topic: "xihe_cloud_test"
+        name: "start_jupyter"
+        topic: "xihe_jupyter_created_test"
 
     points:
       domain:
         max_points_of_day: 50
       repo:
         keep: 30
+      task_doc:
+        templates:
+        - language: Chinese
+          file: /opt/app/points/task-docs-templates/doc_chinese.tmpl
+        - language: English
+          file: /opt/app/points/task-docs-templates/doc_english.tmpl
+
+    download:
+      model_download:
+        name: "download_model"
+        topic: "xihe_download_model_test"
+      dataset_download:
+        name: "download_dataset"
+        topic: "xihe_download_dataset_test"
+      project_download:
+        name: "download_project"
+        topic: "xihe_download_project_test"
+
+    resource:
+      related_resource: "xihe_related_resource_test"
+      fork: "xihe_fork_test"
+      project_created:
+        name: "create_project"
+        topic: "xihe_create_project_test"
+      model_created:
+        name: "create_model"
+        topic: "xihe_create_model_test"
+      dataset_created:
+        name: "create_dataset"
+        topic: "xihe_create_dataset_test"
+
+    sign_in:
+      user_signedin:
+        name: "sign_in"
+        topic: "xihe_sign_in_test"
+
+    user:
+      message:
+        bio_set:
+          name: "set_bio"
+          topic: "xihe_set_bio_test"
+        avatar_set:
+          name: "set_avatar"
+          topic: "xihe_set_avatar_test"
+        operate_log: "xihe_operate_log_test"
+        user_signedup:
+          name: "sign_up"
+          topic: "xihe_sign_up_test"
+        following_added:
+          name: "sign_up"
+          topic: "xihe_following_add_test"
+        following_removed:
+          name: "sign_up"
+          topic: "xihe_following_remove_test"
+
+    like:
+      model_liked:
+        name: "like_model"
+        topic: "xihe_like_model_test"
+      dataset_liked:
+        name: "like_dataset"
+        topic: "xihe_like_dataset_test"
+      project_liked:
+        name: "like_project"
+        topic: "xihe_like_project_test"
