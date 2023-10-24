@@ -3,20 +3,20 @@
     duration: 180
 
     pgsql:
-      host: "127.0.0.1"
-      port: 5432
-      user: "xihe"
-      db_name: "xihe"
-      password: "UGFzc3dvcmQxMQ=="
+      host: "${PGSQL_HOST}"
+      port: ${PGSQL_PORT}
+      user: "${PGSQL_USER}"
+      db_name: "${PGSQL_NAME}"
+      password: "${PGSQL_PWD}"
 
     redis:
       db:
-        address: "127.0.0.1:6379"
-        password: "Password@1"
-        key_pair: "miqQLJ123!$#"
+        address: "${REDIS_ADDRESS}"
+        password: "${REDIS_PASSWORD}"
+        key_pair: "${KEY_PAIR}"
 
     mq:
-      address: "127.0.0.1:9092"
+      address: "${KAFKA_ADDRESS}"
       version: "2.3.0"
       max_retry: 5
       topics:
@@ -38,7 +38,7 @@
         bigmodel: "xihe_bigmodel_test"
 
     gitlab:
-      endpoint: "http://127.0.0.1:8090/api/v4"
-      root_token: "cXA4WHZkeUtyX0Q1bzZMS3lCblY="
+      endpoint: "${GITLAB_ENDPOINT}"
+      root_token: "${GITLAB_TOKEN}"
       count_per_page: 50
       refresh_time: 100

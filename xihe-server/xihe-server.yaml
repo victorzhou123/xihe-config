@@ -123,6 +123,7 @@
         baichuan: "${BIGMODEL_BAICHUAN}"
         glm: "${BIGMODEL_GLM}"
         llama: "${BIGMODEL_LLAMA}"
+        skywork: "{BIGMODEL_SKYWORK}"
 
       obs:
         endpoint: "${VQA_OBS_ENDPOINT}"
